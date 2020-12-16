@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.GameScreen">
+   <children>
+      <ImageView fx:id="hand" fitHeight="77.0" fitWidth="90.0" layoutX="182.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/finger.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pauseButton" fitHeight="59.0" fitWidth="56.0" layoutX="304.0" layoutY="31.0" onMouseClicked="#pauseButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/pauseButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="logo" fitHeight="134.0" fitWidth="360.0" layoutX="41.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="24.0" text="0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font></Label>
+      <ImageView fx:id="circleRotate3" fitHeight="42.0" fitWidth="39.0" layoutX="156.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="circleRotate4" fitHeight="42.0" fitWidth="39.0" layoutX="218.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="boostButton" fitHeight="59.0" fitWidth="56.0" layoutX="304.0" layoutY="711.0" onMouseClicked="#boostButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/boost.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+#listView {
+    -fx-control-inner-background:  #2a282a;
+    -fx-focus-color: transparent;
+}
+#listView .list-cell {
+    -fx-alignment: center;
+    -fx-font-size:20.0;
+}
+
+#listView .list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #fd1f4a;
+    -fx-text-fill:   white;
+    -fx-font-weight: bold;
+}

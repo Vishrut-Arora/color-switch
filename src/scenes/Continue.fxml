@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.GameScreen">
+   <children>
+      <ImageView fx:id="continueButton" fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="373.0" onMouseClicked="#continueButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/continueButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exitButtonCS" fitHeight="40.0" fitWidth="41.0" layoutX="181.0" layoutY="461.0" onMouseClicked="#exitButtonCSClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/exitButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/starsImage.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="totalStarsLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="142.0" prefWidth="100.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="400.0" layoutX="20.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="circleRotate8" fitHeight="52.0" fitWidth="43.0" layoutX="219.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="circleRotate7" fitHeight="52.0" fitWidth="43.0" layoutX="150.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.GameScreen">
+   <children>
+      <ImageView fitHeight="170.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="400.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/score.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="400.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/highScore.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="replayButton" fitHeight="125.0" fitWidth="175.0" layoutX="140.0" layoutY="405.0" onMouseClicked="#replayButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/replayButton.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="28.0" layoutY="34.0" onMouseClicked="#homeButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/backButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="127.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/starsImage.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="scoreLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="221.0" prefWidth="100.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font></Label>
+      <Label fx:id="highScoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="322.0" prefWidth="100.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font></Label>
+      <Label fx:id="totalStarsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="442.0" prefWidth="100.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font></Label>
+      <ImageView fx:id="circleRotate1" fitHeight="47.0" fitWidth="47.0" layoutX="146.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="circleRotate2" fitHeight="47.0" fitWidth="47.0" layoutX="223.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="127.0" layoutX="270.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/starsImage.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="goldenStarsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="442.0" prefWidth="100.0" text="0" textAlignment="CENTER" textFill="#fcc001">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

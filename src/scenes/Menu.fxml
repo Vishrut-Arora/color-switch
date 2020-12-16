@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.Game">
+   <children>
+      <ImageView fitHeight="175.0" fitWidth="408.0" layoutX="-7.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="newGameButton" fitHeight="60.0" fitWidth="256.0" layoutX="100.0" layoutY="632.0" onMouseClicked="#newGameButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/newGame.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="exitButton" fitHeight="41.0" fitWidth="34.0" layoutX="187.0" layoutY="727.0" onMouseClicked="#exitButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/exitButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="circleRotate2" fitHeight="47.0" fitWidth="47.0" layoutX="222.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="circleRotate1" fitHeight="47.0" fitWidth="47.0" layoutX="142.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/circle-cropped.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="layer1" fitHeight="197.0" fitWidth="196.0" layoutX="106.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/layer1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="layer2" fitHeight="258.0" fitWidth="256.0" layoutX="76.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/layer2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="layer3" fitHeight="325.0" fitWidth="324.0" layoutX="43.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/layer3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="resumeButton" fitHeight="150.0" fitWidth="200.0" layoutX="129.0" layoutY="324.0" onMouseClicked="#resumeButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/playButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
