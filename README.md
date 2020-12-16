@@ -1,2 +1,2 @@
-# color-switch
-Color Switch project for Advanced Programming
+# Color-Switch
+Color Switch game project for Advanced Programming
