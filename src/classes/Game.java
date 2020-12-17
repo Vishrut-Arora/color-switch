@@ -9,8 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -22,7 +24,9 @@ public class Game implements Serializable {
     private static final long serialVersionUID=100;
     private transient static Game game;
     @FXML
-    private transient ImageView circleRotate1, circleRotate2, circleRotate3, circleRotate4,layer1, layer2, layer3, newGameButton;
+    private transient AnchorPane anchorPane;
+    @FXML
+    private transient ImageView helpButton, circleRotate1, circleRotate2, circleRotate3, circleRotate4,layer1, layer2, layer3, newGameButton;
     @FXML
     private transient ListView<String> listView;
     private int totalStars, highScore, goldenStars;
@@ -146,6 +150,13 @@ public class Game implements Serializable {
         rotateLayer1.play();
         rotateLayer2.play();
         rotateLayer3.play();
+
+        RotateTransition rotateHelpButton = new RotateTransition(Duration.seconds(3), helpButton);
+        rotateHelpButton.setByAngle(-360);
+        rotateHelpButton.setAxis(Rotate.Z_AXIS);
+        rotateHelpButton.setCycleCount(Timeline.INDEFINITE);
+        rotateHelpButton.setInterpolator(Interpolator.LINEAR);
+        rotateHelpButton.play();
     }
 
     public void playGame() {
@@ -224,5 +235,19 @@ public class Game implements Serializable {
             currentGame.load(gameScreens.get(selectedGame));
             playGame();
         }
+    }
+
+    @FXML
+    public void helpButtonClicked() {
+        MediaPlayer player = new MediaPlayer(new Media(getClass().getResource("../resources/help.mp4").toString()));
+        player.setAutoPlay(false);
+        player.setCycleCount(1);
+        player.setVolume(0);
+        MediaView mediaView = new MediaView(player);
+        mediaView.setFitWidth(400);
+        mediaView.setFitHeight(800);
+        anchorPane.getChildren().add(mediaView);
+        player.play();
+        player.setOnEndOfMedia(()-> anchorPane.getChildren().remove(mediaView));
     }
 }

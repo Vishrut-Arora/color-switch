@@ -386,6 +386,7 @@ public class GameScreen implements Serializable {
     @FXML
     public void continueButtonClicked() {
         Game.getInstance().setTotalStars(Game.getInstance().getTotalStars()-10);
+        totalStarsLabel2.setText(Integer.toString(Game.getInstance().getTotalStars()));
         resume();
     }
 

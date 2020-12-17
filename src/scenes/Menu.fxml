@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.Game">
+<AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #2a282a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.Game">
    <children>
       <ImageView fitHeight="175.0" fitWidth="408.0" layoutX="-7.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -60,6 +60,11 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </ImageView>
+      <ImageView fx:id="helpButton" fitHeight="53.0" fitWidth="47.0" layoutX="181.0" layoutY="167.0" onMouseClicked="#helpButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/help.png" />
+         </image>
       </ImageView>
    </children>
 </AnchorPane>
