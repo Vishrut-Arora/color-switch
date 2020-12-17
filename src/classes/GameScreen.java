@@ -15,6 +15,7 @@ import javafx.util.Duration;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -121,13 +122,14 @@ public class GameScreen implements Serializable {
     }
 
     private void Collision(){
-        for(Entity entity:obstacles){
-            if(entity.onCollide(player) && entity.getClass()!=Star.class && entity.getClass()!=Switch.class){
-                if(Game.getInstance().getTotalStars()>=10) {
+        Iterator iterator= obstacles.iterator();
+        while(iterator.hasNext()) {
+            Entity entity= (Entity) iterator.next();
+            if (entity.onCollide(player) && entity.getClass() != Star.class && entity.getClass() != Switch.class) {
+                if (Game.getInstance().getTotalStars() >= 10) {
                     timeline.pause();
                     primaryStage.setScene(continueScreen);
-                }
-                else
+                } else
                     exitButtonCSClicked();
                 break;
             }
@@ -311,8 +313,10 @@ public class GameScreen implements Serializable {
         this.entitiesY=gameScreen.getEntitiesY();
         this.saveStatus=gameScreen.getSaveStatus();
         updateScore();
-        for(Entity obstacle: gameScreen.obstacles) {
+        Iterator iterator =gameScreen.obstacles.iterator();
+        while(iterator.hasNext()){
             Entity e= null;
+            Entity obstacle= (Entity) iterator.next();
             if(obstacle.getClass()==Circle.class)
                 e = new Circle(obstacle.getX(), obstacle.getY());
             else if(obstacle.getClass()==Cross.class)
